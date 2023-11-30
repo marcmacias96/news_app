@@ -34,8 +34,11 @@ class NewsPage extends StatelessWidget {
                 child: CircularProgressIndicator.adaptive(),
               ),
               error: (_) => const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(child: Text('Error')),
+                  Center(
+                    child: Text('Se ha producido un error inesperado'),
+                  ),
                 ],
               ),
               success: (success) {
