@@ -11,7 +11,7 @@ class News with _$News {
     required Source source,
     String? author,
     required String title,
-    required String description,
+    @JsonKey(defaultValue: "") required String description,
     required String url,
     @JsonKey(name: "urlToImage") String? urlToImage,
     @JsonKey(name: "publishedAt") required DateTime publishedAt,

@@ -23,6 +23,7 @@ mixin _$News {
   Source get source => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
+  @JsonKey(defaultValue: "")
   String get description => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
   @JsonKey(name: "urlToImage")
@@ -45,7 +46,7 @@ abstract class $NewsCopyWith<$Res> {
       {Source source,
       String? author,
       String title,
-      String description,
+      @JsonKey(defaultValue: "") String description,
       String url,
       @JsonKey(name: "urlToImage") String? urlToImage,
       @JsonKey(name: "publishedAt") DateTime publishedAt,
@@ -132,7 +133,7 @@ abstract class _$$NewsImplCopyWith<$Res> implements $NewsCopyWith<$Res> {
       {Source source,
       String? author,
       String title,
-      String description,
+      @JsonKey(defaultValue: "") String description,
       String url,
       @JsonKey(name: "urlToImage") String? urlToImage,
       @JsonKey(name: "publishedAt") DateTime publishedAt,
@@ -205,7 +206,7 @@ class _$NewsImpl implements _News {
       {required this.source,
       this.author,
       required this.title,
-      required this.description,
+      @JsonKey(defaultValue: "") required this.description,
       required this.url,
       @JsonKey(name: "urlToImage") this.urlToImage,
       @JsonKey(name: "publishedAt") required this.publishedAt,
@@ -221,6 +222,7 @@ class _$NewsImpl implements _News {
   @override
   final String title;
   @override
+  @JsonKey(defaultValue: "")
   final String description;
   @override
   final String url;
@@ -280,7 +282,7 @@ abstract class _News implements News {
       {required final Source source,
       final String? author,
       required final String title,
-      required final String description,
+      @JsonKey(defaultValue: "") required final String description,
       required final String url,
       @JsonKey(name: "urlToImage") final String? urlToImage,
       @JsonKey(name: "publishedAt") required final DateTime publishedAt,
@@ -295,6 +297,7 @@ abstract class _News implements News {
   @override
   String get title;
   @override
+  @JsonKey(defaultValue: "")
   String get description;
   @override
   String get url;
